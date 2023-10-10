@@ -1,11 +1,10 @@
-function PokemonCard(){
-    let pokemon = pokemonList[1]
+function PokemonCard(props){
 return (
 <div>
 <figure>
-    {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name}/> : <p>???</p> }g
-    <img src={pokemon.imgSrc} alt="" /> 
-    <figcaption>{pokemon.name}</figcaption>
+    {props.pokemon.imgSrc ? <img src={props.pokemon.imgSrc} alt={props.pokemon.name}/> : <p>???</p> }
+    <img src={props.pokemon.imgSrc} alt="" /> 
+    <figcaption>{props.pokemon.name}</figcaption>
     
     </figure>
     </div>)
@@ -13,16 +12,6 @@ return (
 
     
 
-const pokemonList = [
-    {
-      name: "bulbasaur",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-      name: "mew",
-    },
-  ];
 
 
     export default PokemonCard; 
