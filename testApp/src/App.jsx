@@ -57,10 +57,11 @@ function App(){
     
 <div>
   <PokemonCard pokemon = {pokemon[pokemonIndex]}/>
-   <Button index = {pokemon[pokemonIndex]} />
+  <Button pokemonIndex = {pokemonIndex} nbrPokemon = {pokemonList.length} increment = {handleNext} decrement = {handlePrecedent}/>
+   
 
-  <button onClick={handlePrecedent} >spreview</button>
-  <button onClick={handleNext}>next</button>
+  
+  
   <Toto cedric = {tata} />
   <Toto jeremy = {tom}/>
   
