@@ -1,4 +1,5 @@
 import PokemonCard from "./components/PokemonCard"
+import Toto from "./components/test"
 function App(){
   const pokemonList = [
     {
@@ -11,11 +12,28 @@ function App(){
     },
   ];
   let pokemon = pokemonList[0]
+  let tata = [
+    {
+      name : "toto",
+      age: 45
+    },{
+      name: "jesus",
+      age: 56
+    }
+  ]
+  let tom = "coucou"
   return(
 <div>
   <PokemonCard pokemon = {pokemon}/>
-</div>)
+
+  <Toto cedric = {tata}/>
+  
+</div>
+
+)
+
 }
+
 
 
 
