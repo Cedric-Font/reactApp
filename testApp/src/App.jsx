@@ -1,17 +1,34 @@
+import { useState } from "react";
 import PokemonCard from "./components/PokemonCard"
 import Toto from "./components/test"
+import Button from "./button"
 function App(){
   const pokemonList = [
     {
-      name: "bulbasaur",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-      name: "mew",
-    },
-  ];
-  let pokemon = pokemonList[0]
+        name: "bulbasaur",
+        imgSrc:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+      },
+      {
+        name: "charmander",
+        imgSrc:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+      },
+      {
+        name: "squirtle",
+        imgSrc:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+      },
+      {
+        name: "pikachu",
+        imgSrc:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      },
+      {
+        name: "mew",
+      },
+    ];
+  
   let tata = [
     {
       name : "toto",
@@ -22,11 +39,33 @@ function App(){
     }
   ]
   let tom = "coucou"
-  return(
-<div>
-  <PokemonCard pokemon = {pokemon}/>
+  let pokemon = pokemonList
+  
+  
+  const [pokemonIndex, setpokemonIndex ] = useState(0)
+  const handleNext = () =>{
+    setpokemonIndex(pokemonIndex +1)
+  }
+  const handlePrecedent = () => {
+    setpokemonIndex(pokemonIndex -1)
+  }
+  
 
-  <Toto cedric = {tata}/>
+  console.log(pokemonIndex)
+
+  return(
+    
+<div>
+  <PokemonCard pokemon = {pokemon[pokemonIndex]}/>
+   <Button index = {pokemon[pokemonIndex]} />
+
+  <button onClick={handlePrecedent} >spreview</button>
+  <button onClick={handleNext}>next</button>
+  <Toto cedric = {tata} />
+  <Toto jeremy = {tom}/>
+  
+
+  
   
 </div>
 

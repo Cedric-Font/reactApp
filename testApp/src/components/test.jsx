@@ -1,9 +1,13 @@
 import { Fragment } from "react";
 
 export default function Toto(props){
+    const test = "jhbzejhb"
+    const toto = false;
+
    /* let test = ""
     let tab = ""
-    if(props.jermy){
+
+    if(props.jeremy){
          test = <p>{props.jeremy}</p>
     }else{
          test = ""
@@ -15,7 +19,7 @@ export default function Toto(props){
             
         });
 
-    }*/
+    }
  let tab = ""
     console.log(props.cedric)
 
@@ -23,15 +27,16 @@ export default function Toto(props){
         console.log(element)
     })
     
-    console.log(tab)
+    console.log(tab) */
    
     return(
-        <Fragment>
-            <p>{props.cedric[1].name}</p>
-        
-            
+        <>
+        { toto && (
+            <h1>{test ? test : "rien"}</h1>
+        )
 
-            
-        </Fragment>
+        }
+        
+        </>
     )
-}
+} 
