@@ -6,25 +6,25 @@ import NavBar from "./components/navBar";
 function App() {
   const pokemonList = [
     {
-      key: 0,
+      key: 10,
       name: "bulbasaur",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
     },
     {
-      key: 1,
+      key: 11,
       name: "charmander",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
     },
     {
-      key: 2,
+      key: 12,
       name: "squirtle",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
     },
     {
-      key: 3,
+      key: 13,
       name: "pikachu",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",

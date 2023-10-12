@@ -4,7 +4,9 @@ export default function NavBar(props) {
 
 
     const handleChange = (id) => {
+        
         props.setpokemonIndex(id)
+        
     }
 
 
@@ -12,9 +14,9 @@ export default function NavBar(props) {
     return (
 
         <>
-            {props.pokemonList.map((pokemon) => (
+            {props.pokemonList.map((pokemon, index) => (
 
-                <button key={pokemon.key} onClick={() => handleChange(pokemon.key)} > {pokemon.name} </button>
+                <button key={pokemon.key} onClick={() => handleChange(index)} > {pokemon.name} </button>
             )
 
             )
