@@ -3,76 +3,50 @@ import PokemonCard from "./components/PokemonCard"
 import Toto from "./components/test"
 import Button from "./button"
 import NavBar from "./components/navBar";
-function App(){
+function App() {
   const pokemonList = [
     {
-        name: "bulbasaur",
-        imgSrc:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-      },
-      {
-        name: "charmander",
-        imgSrc:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
-      },
-      {
-        name: "squirtle",
-        imgSrc:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
-      },
-      {
-        name: "pikachu",
-        imgSrc:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
-      },
-      {
-        name: "mew",
-      },
-    ];
-  
-  let tata = [
+      key: 0,
+      name: "bulbasaur",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+    },
     {
-      name : "toto",
-      age: 45
-    },{
-      name: "jesus",
-      age: 56
+      key: 1,
+      name: "charmander",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+    },
+    {
+      key: 2,
+      name: "squirtle",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+    },
+    {
+      key: 3,
+      name: "pikachu",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
     }
-  ]
-  let tom = "coucou"
-  let pokemon = pokemonList
-  
-  
-  const [pokemonIndex, setpokemonIndex ] = useState(0)
-  const handleNext = () =>{
-    setpokemonIndex(pokemonIndex +1)
-  }
-  const handlePrecedent = () => {
-    setpokemonIndex(pokemonIndex -1)
-  }
+  ];
+
+ let pokemon = pokemonList
   
 
-  console.log(pokemonIndex)
 
-  return(
-    
-<div>
-  <PokemonCard pokemon = {pokemon[pokemonIndex]}/>
-  <NavBar pokemonIndex = {pokemonIndex} nbrPokemon = {pokemonList.length} increment = {handleNext} decrement = {handlePrecedent}/>
-  
-   
+  const [pokemonIndex, setpokemonIndex] = useState(0)
 
   
-  
-  <Toto cedric = {tata} />
-  <Toto jeremy = {tom}/>
-  
 
-  
-  
-</div>
+  return (
 
-)
+    <div>
+      <NavBar pokemonIndex={pokemonIndex} pokemonList={pokemonList} setpokemonIndex={setpokemonIndex} />
+      <PokemonCard pokemon = {pokemon[pokemonIndex]} />
+    </div>
+
+  )
 
 }
 
